@@ -1,3 +1,3 @@
 # cs50w-project1-wiki
  
-pip install -r requirements.txt
+To install Django and module markdoen2 run comand pip install -r requirements.txt
