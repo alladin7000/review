@@ -1,3 +1,3 @@
-# CS50 Project 1 wiki
-To install the module Markdown 2 and Django run the command
+# cs50w-project1-wiki
+ 
 pip install -r requirements.txt

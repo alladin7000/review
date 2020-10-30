@@ -6,11 +6,11 @@
 
 {% block body %}
     <h1>All Pages</h1>
-
-    <ul>
+    <hr/>
+    <div class="col-5 list-group">
         {% for entry in entries %}
-            <li>{{ entry }}</li>
+            <a class="list-group-item list-group-item-action font-weight-bold" href="wiki/{{entry}}">{{ entry }}</a>
         {% endfor %}
-    </ul>
+    </div>
 
 {% endblock %}

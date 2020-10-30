@@ -1,0 +1,21 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+	{% if error == 404 %}
+    	Page Not Found
+    {% elif error == 2 %}
+		Error
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+	{% if error == 404 %}
+    	<h1>Page Not Found</h1>
+    	<img src="https://internetdevels.com/sites/default/files/public/blog_preview/404_page_cover.jpg">
+    {% elif error == 2 %}
+		<h1>This page is already exist</h1>
+    	<h3>You cannot create a new page if such a page already exists.</h3>
+        <img src="https://dynomapper.com/images/Common_Sitemaps_Errors_and_How_to_Fix_Them.jpg">
+    {% elif error%}
+    {% endif %}
+{% endblock %}

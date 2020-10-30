@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Create New Page
+{% endblock %}
+
+{% block body %}
+    <h1>New Page</h1>
+    <hr>
+    <form action="{% url 'savechanges' %}" method="POST">
+        {% csrf_token %}
+        <h5><label for="title">Title</label></h5>
+        <input type="text" name="title" id="title" value="{{title}}" disabled="disabled"><br/><br/>
+        <h5><label for="content">Content</label></h5>
+        <textarea id="content" name="content" style="width: 80%; height: 20em">{{content}}</textarea><br/>
+        <button class="btn btn-success" type="submit">Save changes</button>
+    </form>
+{% endblock %}
