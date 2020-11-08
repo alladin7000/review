@@ -5,7 +5,7 @@
 <div class="card" style="margin-bottom: 10px; width: 90%">
     <div class="row no-gutters">
         <div class="col-sm-9 col-md-3">
-            <a href="{% url 'watchlist' listing.id %}"><img class="card-img-top" src="{{ listing.listing_img.url }}" alt="{{ listing.title }}"></a>
+            <a href="{% url 'watchlist' listing.id %}"><img class="card-img-top" src="{{ listing.url }}" alt="{{ listing.title }}"></a>
 
             <!-- {% if not in_wl %}
                 <a class="btn btn-primary btn-sm" style="color: white; margin-left : 10%; margin-top: 10%" href="{% url 'watchlist' listing.id %}">add to Watchlist</a>
