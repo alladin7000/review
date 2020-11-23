@@ -1,0 +1,87 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+
+<div class="jumbotron">
+    {% block pname %}
+    {% if user.username %}
+<h4 style="color:green;">Welcome {{user.username}} !!! </h4>
+    <img  src="https://cdn.icon-icons.com/icons2/2656/PNG/512/winking_emo_emoticon_face_emoji_icon_161000.png">
+{% else %}
+<h4>Hi there !</h4>
+{% endif %}
+{% endblock %}
+{% if not page_obj %}
+    <p>No posts yet!!!</p>
+    {% else %}
+    {% block allorprofile %}
+    <p>Here are all posts from our community  ;)</p>
+    {% endblock %}
+    {% endif %}
+</div>
+
+<div class="container" >
+    
+    
+
+
+  {% block forposts %}
+    {% for bpost in page_obj %}
+
+    <div class="card">
+    <div class="card-header">
+    <h5><a href="{% url 'profilepage' bpost.username %}">{{bpost.username}}</a></a></h5>
+    <p>On {{bpost.timestamp}}</p>
+    {% if user.username == bpost.username %}
+    <button onclick=editpost({{bpost.id}}) class="btn btn-primary">Edit</button>
+    {% endif %}
+    </div>
+    <div class="card-body" id="card-body-{{bpost.id}}">
+        <p>{{bpost.content}}</p>
+    </div>
+    <div class="card-footer" id="likes-{{bpost.id}}">
+      {% if user.username %}
+      {% if bpost.id in likedids %}
+      <p><img class="unlikebtn" onclick="unlikepost({{bpost.id}},{{cuser}})" id="unlikebtn-{{bpost.id}}" src="https://cdn.icon-icons.com/icons2/2656/PNG/512/hearts_emo_emoticon_face_emoji_icon_161005.png"/> <b>{{bpost.likes}}</b></p>
+      {% else %}
+      <p><img class="likebtn" onclick="likepost({{bpost.id}},{{cuser}})" id="likebtn-{{bpost.id}}" src="https://cdn.icon-icons.com/icons2/2656/PNG/512/smiling_emo_emoticon_face_emoji_icon_161041.png"/> <b>{{bpost.likes}}</b></p>
+      {% endif %}
+      {% endif %}
+      
+    </div>
+    </div>
+    <br>
+    {% endfor %}
+    {% endblock %}
+</div>
+
+
+{% if page_obj %}
+{% if page_obj.paginator.num_pages > 1 %}
+<nav aria-label="Page navigation example">
+    <span class="current">
+        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+    </span>
+    <ul class="pagination">
+    {% if page_obj.has_previous %}
+      <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo; Previous</a></li>
+      {% else %}
+      <li class="page-item disabled">
+        <span class="page-link">&laquo; Previous</span>
+      </li>
+      {% endif %}
+      {% for i in page_obj.paginator.page_range %}
+      <li class="page-item"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+      {% endfor %}
+      {% if page_obj.has_next %}
+      <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next &raquo;</a></li>
+      {% else %}
+      <li class="page-item disabled">
+        <span class="page-link">Next &raquo;</span>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
+  {% endif %}
+  {% endif %}
+{% endblock %}
