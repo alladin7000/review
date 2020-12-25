@@ -1,0 +1,66 @@
+{%load static%}
+<!DOCTYPE html>
+<html style="background:#1A1A1A;" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="http://actualidadradio.com/favicon.ico/favicon-16x16.png" type="image/x-icon">
+    <link rel="icon" href="http://actualidadradio.com/favicon.ico/favicon-16x16.png" type="image/x-icon">
+    <link href="/static/css/button.css" rel="stylesheet" >
+    <title>Self management </title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+     <link href="/static/css/history.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="/static/css/font-awesome.min.css">
+     <script src="/static/js/jquery.min.js"></script>
+     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  </head>
+  </head>
+    <body data-spy="scroll" data-offset="0" data-target="#theMenu">
+	<nav class="menu" id="theMenu">
+			<div class="menu-wrap">
+			<h1 class="logo"><a href="{%url 'home'%}">HOME</a></h1>
+			<i class="icon-remove menu-close"></i>
+			<a href="{% url 'history'%}" class="smoothScroll">ALL STORIES</a>
+			<a href="#"><i class="icon-facebook"></i></a>
+			<a href="#"><i class="icon-twitter"></i></a>
+			<a href="#"><i class="icon-dribbble"></i></a>
+			<a href="#"><i class="icon-envelope"></i></a>
+		</div>
+		<div id="menuToggle"><i class="icon-reorder"></i></div>
+	</nav>
+
+<div style="color:#ffff" id="headerwrap">
+    <div class="container">
+    <div id = "wrapperimg" >
+<img id="photo" style=" width: 100%;
+    max-width: 400px;
+    height: auto;
+" src="{{ post.photo.url }}" alt="{{ post.title }}">
+        </div>
+</div>
+
+  {{post.content|safe}}
+
+    {% block content|safe %}
+
+    {%include 'mysite/inc_footer.html'%}
+</div>
+
+	{% endblock %}
+
+	<script src="/static/js/classie.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/smoothscroll.js"></script>
+	<script src="/static/js/main.js"></script>
+	<script src="/static/js/button.js"></script>
+  <a id="gotop" href="#" alt="GO TOP" title="Go top"></a>
+  <script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn.bitrix24.ua/b12480531/crm/site_button/loader_4_b2kqfv.js');
+</script>
+

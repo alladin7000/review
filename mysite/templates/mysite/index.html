@@ -1,0 +1,41 @@
+{%load static%}
+{% load cache %}
+{% cache 60 body %}
+<!DOCTYPE html>
+<html style="background:#1A1A1A;" lang="en">
+  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
+   <div class="containerpre">
+  <div class="item-1"><div></div></div>
+  <div class="item-2"><div></div></div>
+  <div class="item-3"><div></div></div>
+  <div class="item-4"><div></div></div>
+  <div class="item-5"><div></div></div>
+  <div class="item-6"><div></div></div>
+  <div class="item-7"><div></div></div>
+  <div class="item-8"><div></div></div>
+  <div class="item-9"><div></div></div>
+</div>
+
+
+   {% include 'mysite/inc_header.html' %}
+
+
+	<section id="about" name="about"></section>
+	<div id="f">
+		<div class="container">
+			<div class="row">
+				<h3>ABOUT THIS PROJECT</h3>
+
+	<script src="static/js/classie.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/smoothscroll.js"></script>
+	<script src="static/js/main.js"></script>
+	<script src="static/js/button.js"></script>
+  <a id="gotop" href="#" alt="наверх" title="GO TOP"></a>
+     {% include 'mysite/video.html' %}
+   {%include 'mysite/inc_footer.html'%}
+
+</body>
+{% endcache %}
+</html>
+
