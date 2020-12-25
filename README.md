@@ -69,3 +69,30 @@ Also added a convenient content editor [CKEditor 5](https://ckeditor.com/ )
 For technical support, performance monitoring and project scaling installed [ Django Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/changes.html)
 
 ![](static/screenshots/114855.png)
+
+# Project Description:
+
+## To install Django and requirements run command pip install -r requirements.txt
+
+
+# Frontend 
+
+## programming languages / libraries / frameworks
+
+* [HTML](https://www.w3schools.com/html/default.asp)
+* [CSS]( https://www.w3schools.com/css/default.asp)
+* [JavaScript](https://www.w3schools.com/js/DEFAULT.asp)
+* [Bootstrap](https://getbootstrap.com/)
+* [jQuery](https://jquery.com/)
+* [Chart.js](https://www.chartjs.org/)
+* [FontAwesome](https://fontawesome.com/)
+
+# Backend
+
+## programming languages / libraries / frameworks
+* [Python](https://www.python.org/) 
+* [Django](https://www.djangoproject.com/)
+* [asgiref](https://pypi.org/project/asgiref/1.1.1/)
+* [Ckeditor](https://ckeditor.com/)
+* [ Django Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/#)
+* [Pillow](https://pillow.readthedocs.io/en/stable/)
