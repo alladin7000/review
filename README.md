@@ -97,7 +97,7 @@ For technical support, performance monitoring and project scaling installed [ Dj
 * [ Django Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/#)
 * [Pillow](https://pillow.readthedocs.io/en/stable/)
 
-## integration with [Bitrix24](https://www.bitrix24.com/)
+## Integration with [Bitrix24](https://www.bitrix24.com/)
 
 
 
