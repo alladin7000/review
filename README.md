@@ -35,7 +35,37 @@ And the user is automatically sent a letter to the mail with instructions on how
 
 ## Add story 
 
-Then the user is automatically redirected to the add history page. Here the user can write about their achievements, plans, dreams.
+Then the user is automatically redirected to the add story page. Here the user can write about their achievements, plans, dreams.
 
 ![](static/screenshots/113246.png)
 
+## All stories
+
+On the page all stories, you can read the best case studies on the topic of the project published by the content manager.
+Here the user can sort stories by tag.
+
+![](static/screenshots/113513.png)
+
+And also use the search by name
+
+![](static/screenshots/113704.png)
+
+## For content manager
+A convenient panel for managing posts has been created
+1. Search
+2. Post title
+3. Brief description
+4. Preview picture
+5. Filter by category
+![](static/screenshots/114347.png)
+
+
+Also added a convenient content editor [CKEditor 5](https://ckeditor.com/ )
+
+![](static/screenshots/114630.png)
+
+## For technical support
+
+For technical support, performance monitoring and project scaling installed [ Django Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/changes.html)
+
+![](static/screenshots/114855.png)
