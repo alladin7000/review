@@ -92,7 +92,6 @@ For technical support, performance monitoring and project scaling installed [ Dj
 ## programming languages / libraries / frameworks
 * [Python](https://www.python.org/) 
 * [Django](https://www.djangoproject.com/)
-* [asgiref](https://pypi.org/project/asgiref/1.1.1/)
 * [Ckeditor](https://ckeditor.com/)
 * [ Django Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/#)
 * [Pillow](https://pillow.readthedocs.io/en/stable/)
