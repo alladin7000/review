@@ -1,0 +1,48 @@
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="http://actualidadradio.com/favicon.ico/favicon-16x16.png" type="image/x-icon">
+    <link rel="icon" href="http://actualidadradio.com/favicon.ico/favicon-16x16.png" type="image/x-icon">        <link href="static/css/button.css" rel="stylesheet" >
+    <title>Self management </title>
+	 <link href="static/css/bootstrap.css" rel="stylesheet">
+	 <link href="static/css/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="static/css/font-awesome.min.css">
+	 <script src="static/js/jquery.min.js"></script>
+	 <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+  </head>
+	<nav class="menu" id="theMenu">
+		<div class="menu-wrap">
+			<h1 class="logo"><a href="{%url 'home'%}">HOME</a></h1>
+			<i class="icon-remove menu-close"></i>
+			<a href="{% url 'history'%}" class="smoothScroll">ALL STORIES</a>
+			<a href="#contact" class="smoothScroll">JOIN US</a>
+			<a href="#"><i class="icon-facebook"></i></a>
+			<a href="#"><i class="icon-twitter"></i></a>
+			<a href="#"><i class="icon-dribbble"></i></a>
+			<a href="#"><i class="icon-envelope"></i></a>
+		</div>
+		<div id="menuToggle"><i class="icon-reorder"></i></div>
+	</nav>
+
+	<section id="home" name="home"></section>
+	<div id="headerwrap">
+		<div class="container">
+			<div class="logo">
+				<a href="{%url 'home'%}"><img src="static/img/newlogo.png"></a>
+			</div>
+			<br>
+			<div class="row">
+				<h1>GROW WITH US</h1>
+				<br>
+				<h3>And remember! We are proud of you; )</h3>
+				<br>
+				<br>
+				<div class="col-lg-6 col-lg-offset-3">
+				</div>
+			</div>
+		</div>
+	</div>
+
