@@ -1,0 +1,51 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Active Listing</h2>
+    <hr/>
+    
+    {% for listing in listings %} 
+    
+    <div class="container bcontent">
+       
+        <div class="card" style="margin-bottom: 10px; width: 100%">
+            <div class="row no-gutters">
+                <div class="col-sm-9 col-md-3">
+                    <img class="card-img-top" src="{{ listing.url }}" alt="{{ listing.title }}">
+                </div>
+                <div class="col-sm-3 col-md-6 d-flex flex-column">
+                    <div class="card-body ">
+                        <!-- Title -->
+                        <h6 class="card-title font-weight-bold">
+                            {{ listing.title }}
+                            {% if listing.listing_open %}
+                                <span style="color: blue; font-style: bold; font-size: smaller; margin-left: 20px;">
+                                </span>
+                            {% elif listing.listing_winner == request.user %}
+                                <span style="color: red; font-style: bold; font-size: smaller; margin-left: 20px;">
+                                    You won this Auction
+                                </span>
+                            {% else %}
+                                <span style="color: red; font-style: bold; font-size: smaller; margin-left: 20px;">
+                                </span>
+                                <p class="card-text small float-right" >won by: {{listing.listing_winner}}</p>
+                            {% endif %}
+                        </h6>
+
+                        <!-- Text -->
+                        <p class="card-text">{{ listing.listing_desc }}</p>
+
+                        <!-- Price  -->
+                        <h6 class="card-title font-weight-bold"><a>initial price $ {{ listing.starting_price}}</a></h6>
+                        {% if user.is_authenticated %}
+                            <a href='{% url "listing" listing.id %}' class="card-link">Show Listing</a>
+                        {% endif %}
+                        <p class="card-text small align-self-end" style="flex-direction: column;"><i>created: {{ listing.created_at }} by: {{ listing.listing_owner }}</i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %} 
+
+{% endblock %}
